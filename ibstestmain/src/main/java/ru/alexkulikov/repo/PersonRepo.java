@@ -4,7 +4,6 @@ import org.springframework.stereotype.Repository;
 import ru.alexkulikov.entity.Person;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 
 @Repository
 public class PersonRepo extends MemoryRepo<Person> {

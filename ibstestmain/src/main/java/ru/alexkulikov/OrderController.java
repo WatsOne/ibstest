@@ -5,20 +5,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.alexkulikov.entity.Person;
-import ru.alexkulikov.repo.PersonRepo;
+import ru.alexkulikov.entity.Order;
+import ru.alexkulikov.repo.OrderRepo;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("orders")
-public class ApiController {
+@RequestMapping("order")
+public class OrderController {
 
     @Autowired
-    private PersonRepo personRepo;
+    private OrderRepo orderRepo;
 
-    @GetMapping(value = "/get")
-    public ResponseEntity<List<Person>> hello() {
-        return ResponseEntity.ok().body(personRepo.getAll());
+    @GetMapping(value = "/getAll")
+    public ResponseEntity<List<Order>> hello() {
+        return ResponseEntity.ok().body(orderRepo.getAll());
     }
 }
